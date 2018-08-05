@@ -57,7 +57,7 @@ Create a new column m=y/x, the ratio of a movie's domestic gross sales to it's b
 
 
 ```python
-df['m'] = #write a formula to create the new column
+df['m'] = None #write a formula to create the new column
 ```
 
 ## 4. Histogram <a id="hist"></a>  
@@ -74,10 +74,13 @@ Calculate the mean and median of m.
 
 
 ```python
-mean = #your code here
-median = #your code here
+mean = None #your code here
+median = None #your code here
 print('Mean: {}, Median: {}'.format(mean, median))
 ```
+
+    Mean: None, Median: None
+
 
 ## 6. Initial Model <a id="model1"></a>
 Create two initial models using these summary statistics.  
@@ -172,7 +175,7 @@ The function should take in 5 parameters:
 
 
 ```python
-def gradient_descent(error_function, step_size_coeff, max_iterations, start_x):
+# def gradient_descent(error_function, step_size_coeff, max_iterations, start_x):
     #Step 1 create a while loop that executes until the difference between one iteration and the next is less then the precision value
     #Step 2 calculate the gradient (the derivative)
     #Step 3 take a step in that direction
