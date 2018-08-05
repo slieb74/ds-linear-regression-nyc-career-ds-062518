@@ -6,7 +6,7 @@ Today we're going to look at linear regression!
 ### Table of Contents
 1. [Import Data](#data)
 2. [Scatter Plot](#scatter)
-3. [Feature Engineering: Calculating Slooe](#slope)
+3. [Feature Engineering: Calculating Slope](#slope)
 4. [Histogram](#hist)
 5. [Summary Statistics](#sumstats)
 6. [Initial Model](#model1)
@@ -111,7 +111,7 @@ plt.scatter(df.budget, df.domgross)
 
 
 
-    <matplotlib.collections.PathCollection at 0x119887400>
+    <matplotlib.collections.PathCollection at 0x11836f978>
 
 
 
@@ -227,7 +227,7 @@ df.m.hist() #Write code to display m as a histogram
 
 
 
-    <matplotlib.axes._subplots.AxesSubplot at 0x119a02cf8>
+    <matplotlib.axes._subplots.AxesSubplot at 0x11c87ad68>
 
 
 
@@ -282,7 +282,7 @@ plt.legend(bbox_to_anchor=(1,1))
 
 
 
-    <matplotlib.legend.Legend at 0x119c14470>
+    <matplotlib.legend.Legend at 0x11ccaa588>
 
 
 
@@ -480,44 +480,6 @@ The function should take in 5 parameters:
 5. start_x; The original x-value to initialize gradient descent.
 
 **Hint:** Use the np.gradient() function to calculate the derivative at a given point for each iteration.
-
-
-```python
-def gradient_descent(error_function, step_size_coeff, max_iterations, start_x):
-    #Step 1 create a while loop that executes until the difference between one iteration and the next is less then the precision value
-    #Step 2 calculate the gradient (the derivative)
-    #Step 3 
-```
-
-
-      File "<ipython-input-16-80cb0b06439a>", line 4
-        #Step 3
-                ^
-    SyntaxError: unexpected EOF while parsing
-
-
-
-
-```python
-def gradient_descent(error_function, step_size_coeff, max_iterations):
-    return optimal_solution
-```
-
-
-```python
-def gradient_descent(error_function, step_size_coeff, max_iterations, start_x):
-    iteration = 0 #initialize
-    cur_x = start_x
-    while (previous_step_size > precision) & (iteration < max_iterationss):
-        print('Current value: {} RSS Produced: {}'.format(cur_x, error(df.budget, df.domgross, cur_x)))
-        prev_x = cur_x
-        x_survey_region = np.linspace(start = cur_x - previous_step_size , stop = cur_x + previous_step_size , num = 101)
-        rss_survey_region = [np.sqrt(error(df.budget, df.domgross, m)) for m in x_survey_region]
-        gradient = np.gradient(rss_survey_region)[50] 
-        cur_x -= gamma * gradient #Move opposite the gradient
-        previous_step_size = abs(cur_x - prev_x)
-        iteration += 1
-```
 
 
 ```python
